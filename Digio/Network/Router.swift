@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+enum Router {
+    case content
+    
+    var scheme: String {
+        return "https"
+    }
+    
+    var host: String {
+        return "7hgi9vtkdc.execute-api.sa-east-1.amazonaws.com"
+    }
+    
+    var path: String {
+        return "/sandbox/products"
+    }
+    
+    var method: String {
+        return "GET"
+    }
+}

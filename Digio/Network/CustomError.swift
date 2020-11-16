@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+enum CustomError: Error {
+    case api
+    case network
+    case parse
+    case unknown
+}
