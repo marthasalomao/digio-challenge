@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F528F8C9256362E900FBD5F1 /* ContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528F8C7256362E900FBD5F1 /* ContentTableViewCell.swift */; };
+		F528F8CA256362E900FBD5F1 /* ContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F528F8C8256362E900FBD5F1 /* ContentTableViewCell.xib */; };
+		F528F8CD2563645A00FBD5F1 /* GenericCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528F8CB2563645A00FBD5F1 /* GenericCollectionViewCell.swift */; };
+		F528F8CE2563645A00FBD5F1 /* GenericCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F528F8CC2563645A00FBD5F1 /* GenericCollectionViewCell.xib */; };
 		F54BDA6E25630EEF00C501CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BDA6D25630EEF00C501CE /* AppDelegate.swift */; };
 		F54BDA7025630EEF00C501CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54BDA6F25630EEF00C501CE /* ViewController.swift */; };
 		F54BDA7325630EEF00C501CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F54BDA7125630EEF00C501CE /* Main.storyboard */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F528F8C7256362E900FBD5F1 /* ContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTableViewCell.swift; sourceTree = "<group>"; };
+		F528F8C8256362E900FBD5F1 /* ContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentTableViewCell.xib; sourceTree = "<group>"; };
+		F528F8CB2563645A00FBD5F1 /* GenericCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCollectionViewCell.swift; sourceTree = "<group>"; };
+		F528F8CC2563645A00FBD5F1 /* GenericCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericCollectionViewCell.xib; sourceTree = "<group>"; };
 		F54BDA6A25630EEF00C501CE /* Digio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Digio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54BDA6D25630EEF00C501CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F54BDA6F25630EEF00C501CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +53,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F528F8CF25636B2000FBD5F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F54BDA6F25630EEF00C501CE /* ViewController.swift */,
+				F54BDA7125630EEF00C501CE /* Main.storyboard */,
+				F528F8C7256362E900FBD5F1 /* ContentTableViewCell.swift */,
+				F528F8C8256362E900FBD5F1 /* ContentTableViewCell.xib */,
+				F528F8CB2563645A00FBD5F1 /* GenericCollectionViewCell.swift */,
+				F528F8CC2563645A00FBD5F1 /* GenericCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F54BDA6125630EEF00C501CE = {
 			isa = PBXGroup;
 			children = (
@@ -67,8 +88,7 @@
 				F54BDA822563120700C501CE /* Network */,
 				F54BDA7F25630F3000C501CE /* Model */,
 				F54BDA6D25630EEF00C501CE /* AppDelegate.swift */,
-				F54BDA6F25630EEF00C501CE /* ViewController.swift */,
-				F54BDA7125630EEF00C501CE /* Main.storyboard */,
+				F528F8CF25636B2000FBD5F1 /* View */,
 				F54BDA7425630EEF00C501CE /* Assets.xcassets */,
 				F54BDA7625630EEF00C501CE /* LaunchScreen.storyboard */,
 				F54BDA7925630EEF00C501CE /* Info.plist */,
@@ -157,6 +177,8 @@
 				F54BDA7825630EEF00C501CE /* LaunchScreen.storyboard in Resources */,
 				F54BDA7525630EEF00C501CE /* Assets.xcassets in Resources */,
 				F54BDA7325630EEF00C501CE /* Main.storyboard in Resources */,
+				F528F8CA256362E900FBD5F1 /* ContentTableViewCell.xib in Resources */,
+				F528F8CE2563645A00FBD5F1 /* GenericCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +192,8 @@
 				F54BDA7025630EEF00C501CE /* ViewController.swift in Sources */,
 				F54BDA862563123B00C501CE /* Service.swift in Sources */,
 				F54BDA882563124700C501CE /* Router.swift in Sources */,
+				F528F8CD2563645A00FBD5F1 /* GenericCollectionViewCell.swift in Sources */,
+				F528F8C9256362E900FBD5F1 /* ContentTableViewCell.swift in Sources */,
 				F54BDA812563102200C501CE /* ContentModel.swift in Sources */,
 				F54BDA8E2563128600C501CE /* Result.swift in Sources */,
 				F54BDA6E25630EEF00C501CE /* AppDelegate.swift in Sources */,
