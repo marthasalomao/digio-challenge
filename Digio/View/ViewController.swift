@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Properties
+    var content: Content?
+    var service = Service()
+
     // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +25,19 @@ class ViewController: UIViewController {
         self.tableView.register(UINib(nibName: "ContentTableViewCell", bundle: nil),
                                 forCellReuseIdentifier: "tableViewCell")
     }
-
+    
+    // MARK: - Methods - FAZER CHAMADA
+    func loadContent() {
+        service.request(router: Router.content) { (result: Result<Content>) in
+            switch result {
+            case .success(let content):
+                self.content = content
+                self.tableView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {

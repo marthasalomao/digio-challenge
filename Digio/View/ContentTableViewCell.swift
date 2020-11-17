@@ -5,7 +5,7 @@
 //  Created by Martha R on 16/11/2020.
 //  Copyright © 2020 Martha Salomão de Moraes. All rights reserved.
 //
-
+import Kingfisher
 import UIKit
 
 class ContentTableViewCell: UITableViewCell {
@@ -14,6 +14,12 @@ class ContentTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Methods
+    func prepare(contents: Content) {
+        
+        //CRIAR METODO Q RECEBE "CONTENT" para depois a gente configurar as collectionsViewsCells
+        //adicionar cocoaPods e instalar kingsFisher
+    }
+    
     func setupCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal

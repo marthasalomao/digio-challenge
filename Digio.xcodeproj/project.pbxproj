@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82F3404FB5EDF90424AA56F8 /* Pods_Digio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A54B058BFE11A6A2910CB439 /* Pods_Digio.framework */; };
 		F528F8C9256362E900FBD5F1 /* ContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528F8C7256362E900FBD5F1 /* ContentTableViewCell.swift */; };
 		F528F8CA256362E900FBD5F1 /* ContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F528F8C8256362E900FBD5F1 /* ContentTableViewCell.xib */; };
 		F528F8CD2563645A00FBD5F1 /* GenericCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528F8CB2563645A00FBD5F1 /* GenericCollectionViewCell.swift */; };
@@ -24,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B508475D1A5A4FE66380A65 /* Pods-Digio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digio.release.xcconfig"; path = "Target Support Files/Pods-Digio/Pods-Digio.release.xcconfig"; sourceTree = "<group>"; };
+		A520F4FEDEE447EF93FA1220 /* Pods-Digio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Digio.debug.xcconfig"; path = "Target Support Files/Pods-Digio/Pods-Digio.debug.xcconfig"; sourceTree = "<group>"; };
+		A54B058BFE11A6A2910CB439 /* Pods_Digio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Digio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F528F8C7256362E900FBD5F1 /* ContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTableViewCell.swift; sourceTree = "<group>"; };
 		F528F8C8256362E900FBD5F1 /* ContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentTableViewCell.xib; sourceTree = "<group>"; };
 		F528F8CB2563645A00FBD5F1 /* GenericCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -47,12 +51,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82F3404FB5EDF90424AA56F8 /* Pods_Digio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2177F069FE6EFB55ADDEB169 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A54B058BFE11A6A2910CB439 /* Pods_Digio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		549172BD5C349D4985D6DA10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A520F4FEDEE447EF93FA1220 /* Pods-Digio.debug.xcconfig */,
+				7B508475D1A5A4FE66380A65 /* Pods-Digio.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F528F8CF25636B2000FBD5F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +94,8 @@
 			children = (
 				F54BDA6C25630EEF00C501CE /* Digio */,
 				F54BDA6B25630EEF00C501CE /* Products */,
+				549172BD5C349D4985D6DA10 /* Pods */,
+				2177F069FE6EFB55ADDEB169 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F54BDA7C25630EEF00C501CE /* Build configuration list for PBXNativeTarget "Digio" */;
 			buildPhases = (
+				41B511F37A3D573BCA15C60E /* [CP] Check Pods Manifest.lock */,
 				F54BDA6625630EEF00C501CE /* Sources */,
 				F54BDA6725630EEF00C501CE /* Frameworks */,
 				F54BDA6825630EEF00C501CE /* Resources */,
+				DBA1536F9CF4208E930AB65B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +210,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41B511F37A3D573BCA15C60E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Digio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBA1536F9CF4208E930AB65B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Digio/Pods-Digio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Digio/Pods-Digio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F54BDA6625630EEF00C501CE /* Sources */ = {
@@ -332,6 +402,7 @@
 		};
 		F54BDA7D25630EEF00C501CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A520F4FEDEE447EF93FA1220 /* Pods-Digio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -346,6 +417,7 @@
 		};
 		F54BDA7E25630EEF00C501CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B508475D1A5A4FE66380A65 /* Pods-Digio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
