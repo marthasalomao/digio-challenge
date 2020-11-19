@@ -20,13 +20,14 @@ class ViewController: UIViewController {
     // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loadContent()
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: "ContentTableViewCell", bundle: nil),
                                 forCellReuseIdentifier: "tableViewCell")
     }
     
-    // MARK: - Methods - FAZER CHAMADA
+    // MARK: - Methods 
     func loadContent() {
         service.request(router: Router.content) { (result: Result<Content>) in
             switch result {
@@ -52,12 +53,22 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
                                                         return UITableViewCell()
         }
         
-        cell.setupCollectionView()
-        return cell
+        if let content = content {
+            if indexPath.row == 0 {
+                cell.prepare(contents: content, type: .spotlight)
+            } else if indexPath.row == 1 {
+                cell.prepare(contents: content, type: .cash)
+            } else {
+                cell.prepare(contents: content, type: .product)
+            }
+        }
         
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 2 { return 80 }
         return 180
     }
 }
+

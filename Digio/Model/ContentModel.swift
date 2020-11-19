@@ -10,16 +10,16 @@ import Foundation
 
 // MARK: - Content
 struct Content: Codable {
-    let spotlight: [Spotlight]
-    let products: [Product]
-    let cash: Cash
+    let spotlight: [Spotlight]?
+    let products: [Product]?
+    let cash: Cash?
 }
 
 // MARK: - Cash
 struct Cash: Codable {
-    let title: String
-    let bannerURL: String
-    let cashDescription: String
+    let title: String?
+    let bannerURL: String?
+    let cashDescription: String?
     
     enum CodingKeys: String, CodingKey {
         case title, bannerURL
@@ -29,9 +29,9 @@ struct Cash: Codable {
 
 // MARK: - Product
 struct Product: Codable {
-    let name: String
-    let imageURL: String
-    let productDescription: String
+    let name: String?
+    let imageURL: String?
+    let productDescription: String?
     
     enum CodingKeys: String, CodingKey {
         case name, imageURL
@@ -41,12 +41,28 @@ struct Product: Codable {
 
 // MARK: - Spotlight
 struct Spotlight: Codable {
-    let name: String
-    let bannerURL: String
-    let spotlightDescription: String
+    let name: String?
+    let bannerURL: String?
+    let spotlightDescription: String?
     
     enum CodingKeys: String, CodingKey {
         case name, bannerURL
         case spotlightDescription = "description"
     }
 }
+
+enum ContentType {
+    case spotlight
+    case product
+    case cash
+}
+
+
+
+
+
+
+
+
+
+

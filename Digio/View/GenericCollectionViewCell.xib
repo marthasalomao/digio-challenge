@@ -19,26 +19,39 @@
                 <rect key="frame" x="0.0" y="0.0" width="300" height="180"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Utj-iY-jqK">
-                        <rect key="frame" x="8" y="8" width="284" height="164"/>
-                        <color key="backgroundColor" red="0.69846526015228427" green="0.57952022675405657" blue="0.54625424596433658" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <integer key="value" value="8"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOr-Dx-vIP">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="180"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J6i-Q9-bQb">
+                                <rect key="frame" x="8" y="8" width="284" height="164"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="J6i-Q9-bQb" secondAttribute="trailing" constant="8" id="TZz-jR-ZTX"/>
+                            <constraint firstItem="J6i-Q9-bQb" firstAttribute="top" secondItem="FOr-Dx-vIP" secondAttribute="top" constant="8" id="j8k-qn-Eax"/>
+                            <constraint firstItem="J6i-Q9-bQb" firstAttribute="leading" secondItem="FOr-Dx-vIP" secondAttribute="leading" constant="8" id="jBd-iF-JFf"/>
+                            <constraint firstAttribute="bottom" secondItem="J6i-Q9-bQb" secondAttribute="bottom" constant="8" id="wdB-Cx-DFi"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="Utj-iY-jqK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="4co-HB-VPA"/>
-                <constraint firstItem="Utj-iY-jqK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="WBl-Wn-8Gx"/>
-                <constraint firstAttribute="bottom" secondItem="Utj-iY-jqK" secondAttribute="bottom" constant="8" id="fby-KU-GO6"/>
-                <constraint firstAttribute="trailing" secondItem="Utj-iY-jqK" secondAttribute="trailing" constant="8" id="sBo-aa-y8r"/>
+                <constraint firstAttribute="trailing" secondItem="FOr-Dx-vIP" secondAttribute="trailing" id="1SM-t9-HVH"/>
+                <constraint firstAttribute="bottom" secondItem="FOr-Dx-vIP" secondAttribute="bottom" id="QJE-fp-yrn"/>
+                <constraint firstItem="FOr-Dx-vIP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uO1-bk-h8J"/>
+                <constraint firstItem="FOr-Dx-vIP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="von-Rf-X9k"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="112" height="50"/>
+            <connections>
+                <outlet property="contentImage" destination="J6i-Q9-bQb" id="nco-yf-hpO"/>
+            </connections>
             <point key="canvasLocation" x="65" y="54"/>
         </collectionViewCell>
     </objects>
