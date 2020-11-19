@@ -34,10 +34,22 @@ class ViewController: UIViewController {
             case .success(let content):
                 self.content = content
                 self.tableView.reloadData()
-            case .failure(let error):
-                print(error)
+            case .failure:
+                self.showAlert()
             }
         }
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Ops, algo deu errado",
+                                      message: "Você gostaria de tentar novamente?",
+                                      preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Tentar novamente",
+                                      style: .default, handler: { action in
+                                        self.loadContent()
+        }))
+        self.present(alert, animated: true)
     }
 }
 
